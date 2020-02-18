@@ -1,0 +1,25 @@
+module testled(
+  led1,  //these are the connections to the module that we expose externally
+  led2 //external pin number is assigned in the UCF file like this:
+               //NET "LED"            LOC =  "P39";
+               //NET "LED_INV"        LOC =  "P38";
+   );
+
+
+   output led1;//LED D1 is an output from the module
+   output led2; //LED_INV is also an output
+
+   reg led1;//a register to output LED
+   reg led2; //a register to output LED_INV
+
+   always //start of the action section
+   begin
+       led1=1'b0; //Hold the LED D1 on (high)
+       led2=1'b0; //Hold LED D2 off (low)
+                   //other states are
+                   //1'b1 HIGH
+                   //1'b0 LOW
+                   //1'bz HiZ (input)
+   end
+
+endmodule

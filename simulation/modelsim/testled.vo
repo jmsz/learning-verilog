@@ -1,0 +1,225 @@
+// Copyright (C) 2018  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
+
+// DATE "02/04/2020 09:10:41"
+
+// 
+// Device: Altera EP4CE6E22C8 Package TQFP144
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module testled (
+	LED1,
+	LED2,
+	LED3,
+	LED4,
+	CKEY1,
+	CKEY2,
+	CKEY3,
+	CKEY4);
+output 	LED1;
+output 	LED2;
+output 	LED3;
+output 	LED4;
+input 	CKEY1;
+input 	CKEY2;
+input 	CKEY3;
+input 	CKEY4;
+
+// Design Ports Information
+// LED1	=>  Location: PIN_87,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// LED2	=>  Location: PIN_86,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// LED3	=>  Location: PIN_85,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// LED4	=>  Location: PIN_84,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// CKEY1	=>  Location: PIN_88,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// CKEY2	=>  Location: PIN_89,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// CKEY3	=>  Location: PIN_90,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// CKEY4	=>  Location: PIN_91,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+// synopsys translate_off
+initial $sdf_annotate("testled_v.sdo");
+// synopsys translate_on
+
+wire \LED1~output_o ;
+wire \LED2~output_o ;
+wire \LED3~output_o ;
+wire \LED4~output_o ;
+wire \CKEY1~input_o ;
+wire \CKEY2~input_o ;
+wire \CKEY3~input_o ;
+wire \CKEY4~input_o ;
+
+
+hard_block auto_generated_inst(
+	.devpor(devpor),
+	.devclrn(devclrn),
+	.devoe(devoe));
+
+// Location: IOOBUF_X34_Y10_N9
+cycloneive_io_obuf \LED1~output (
+	.i(\CKEY1~input_o ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\LED1~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \LED1~output .bus_hold = "false";
+defparam \LED1~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X34_Y9_N2
+cycloneive_io_obuf \LED2~output (
+	.i(\CKEY2~input_o ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\LED2~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \LED2~output .bus_hold = "false";
+defparam \LED2~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X34_Y9_N9
+cycloneive_io_obuf \LED3~output (
+	.i(\CKEY3~input_o ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\LED3~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \LED3~output .bus_hold = "false";
+defparam \LED3~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X34_Y9_N16
+cycloneive_io_obuf \LED4~output (
+	.i(\CKEY4~input_o ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\LED4~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \LED4~output .bus_hold = "false";
+defparam \LED4~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X34_Y12_N22
+cycloneive_io_ibuf \CKEY1~input (
+	.i(CKEY1),
+	.ibar(gnd),
+	.o(\CKEY1~input_o ));
+// synopsys translate_off
+defparam \CKEY1~input .bus_hold = "false";
+defparam \CKEY1~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X34_Y12_N15
+cycloneive_io_ibuf \CKEY2~input (
+	.i(CKEY2),
+	.ibar(gnd),
+	.o(\CKEY2~input_o ));
+// synopsys translate_off
+defparam \CKEY2~input .bus_hold = "false";
+defparam \CKEY2~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X34_Y12_N8
+cycloneive_io_ibuf \CKEY3~input (
+	.i(CKEY3),
+	.ibar(gnd),
+	.o(\CKEY3~input_o ));
+// synopsys translate_off
+defparam \CKEY3~input .bus_hold = "false";
+defparam \CKEY3~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X34_Y12_N1
+cycloneive_io_ibuf \CKEY4~input (
+	.i(CKEY4),
+	.ibar(gnd),
+	.o(\CKEY4~input_o ));
+// synopsys translate_off
+defparam \CKEY4~input .bus_hold = "false";
+defparam \CKEY4~input .simulate_z_as = "z";
+// synopsys translate_on
+
+assign LED1 = \LED1~output_o ;
+
+assign LED2 = \LED2~output_o ;
+
+assign LED3 = \LED3~output_o ;
+
+assign LED4 = \LED4~output_o ;
+
+endmodule
+
+module hard_block (
+
+	devpor,
+	devclrn,
+	devoe);
+
+// Design Ports Information
+// ~ALTERA_ASDO_DATA1~	=>  Location: PIN_6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_FLASH_nCE_nCSO~	=>  Location: PIN_8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_DCLK~	=>  Location: PIN_12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_DATA0~	=>  Location: PIN_13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_nCEO~	=>  Location: PIN_101,	 I/O Standard: 2.5 V,	 Current Strength: 8mA
+
+input 	devpor;
+input 	devclrn;
+input 	devoe;
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+wire \~ALTERA_ASDO_DATA1~~padout ;
+wire \~ALTERA_FLASH_nCE_nCSO~~padout ;
+wire \~ALTERA_DATA0~~padout ;
+wire \~ALTERA_ASDO_DATA1~~ibuf_o ;
+wire \~ALTERA_FLASH_nCE_nCSO~~ibuf_o ;
+wire \~ALTERA_DATA0~~ibuf_o ;
+
+
+endmodule

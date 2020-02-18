@@ -1,0 +1,16 @@
+vendor_name = ModelSim
+source_file = 1, /home/anp/intelFPGA_lite/18.1/testled/output_files/Chain1.cdf
+source_file = 1, /home/anp/intelFPGA_lite/18.1/testled/testled.v
+design_name = testled
+instance = comp, \LED1~output , LED1~output, testled, 1
+instance = comp, \LED2~output , LED2~output, testled, 1
+instance = comp, \LED3~output , LED3~output, testled, 1
+instance = comp, \LED4~output , LED4~output, testled, 1
+instance = comp, \CKEY1~input , CKEY1~input, testled, 1
+instance = comp, \CKEY2~input , CKEY2~input, testled, 1
+instance = comp, \CKEY3~input , CKEY3~input, testled, 1
+instance = comp, \CKEY4~input , CKEY4~input, testled, 1
+design_name = hard_block
+instance = comp, \~ALTERA_ASDO_DATA1~~ibuf , ~ALTERA_ASDO_DATA1~~ibuf, hard_block, 1
+instance = comp, \~ALTERA_FLASH_nCE_nCSO~~ibuf , ~ALTERA_FLASH_nCE_nCSO~~ibuf, hard_block, 1
+instance = comp, \~ALTERA_DATA0~~ibuf , ~ALTERA_DATA0~~ibuf, hard_block, 1

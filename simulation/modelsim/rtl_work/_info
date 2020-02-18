@@ -1,0 +1,32 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/anp/intelFPGA_lite/18.1/testled/simulation/modelsim
+vtestled
+!s110 1581101306
+!i10b 1
+!s100 6UB`ZjzJ9K0GcI_S=l0mb1
+I?VE]L:9nWh6@ZPTRi6`nF0
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1580841985
+8/home/anp/intelFPGA_lite/18.1/testled/testled.v
+F/home/anp/intelFPGA_lite/18.1/testled/testled.v
+L0 1
+OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1581101306.000000
+!s107 /home/anp/intelFPGA_lite/18.1/testled/testled.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/anp/intelFPGA_lite/18.1/testled|/home/anp/intelFPGA_lite/18.1/testled/testled.v|
+!i113 1
+o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+/home/anp/intelFPGA_lite/18.1/testled
+tCvgOpt 0
